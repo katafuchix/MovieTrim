@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DQx-fg-qYM">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="neP-OD-jo2">
+            <objects>
+                <viewController id="DQx-fg-qYM" customClass="ViewController" customModule="TrimMovie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DEx-er-nZ8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QAf-FH-b9c" customClass="TrimmerView" customModule="PryntTrimmerView">
+                                <rect key="frame" x="0.0" y="752" width="414" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="MwE-Ib-xg4"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mcu-BF-iwj" userLabel="playerView">
+                                <rect key="frame" x="8" y="44" width="398" height="700"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HHU-lQ-spr">
+                                <rect key="frame" x="0.0" y="820" width="414" height="34"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uVY-8f-ZTB">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="34"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qyz-ip-vaB">
+                                                <rect key="frame" x="0.0" y="0.5" width="138" height="33"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <state key="normal" title="Start/Stop">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="play:" destination="DQx-fg-qYM" eventType="touchUpInside" id="FvO-lb-703"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOf-AQ-xmm">
+                                                <rect key="frame" x="138" y="0.0" width="138" height="34"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <state key="normal" title="Select Video">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="selectAsset:" destination="DQx-fg-qYM" eventType="touchUpInside" id="QRb-rK-Wsh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8W-fR-a5L">
+                                                <rect key="frame" x="276" y="0.0" width="138" height="34"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <state key="normal" title="Save">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onSave:" destination="DQx-fg-qYM" eventType="touchUpInside" id="nbi-tw-sfk"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="uVY-8f-ZTB" firstAttribute="top" secondItem="HHU-lQ-spr" secondAttribute="top" id="3HA-jU-pFl"/>
+                                    <constraint firstAttribute="bottom" secondItem="uVY-8f-ZTB" secondAttribute="bottom" id="MFz-Ik-O1h"/>
+                                    <constraint firstAttribute="trailing" secondItem="uVY-8f-ZTB" secondAttribute="trailing" id="anz-lA-sYx"/>
+                                    <constraint firstItem="uVY-8f-ZTB" firstAttribute="leading" secondItem="HHU-lQ-spr" secondAttribute="leading" id="oAE-ML-oeZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QAf-FH-b9c" firstAttribute="firstBaseline" secondItem="mcu-BF-iwj" secondAttribute="baseline" constant="8" symbolType="layoutAnchor" id="4bl-rn-Bhd"/>
+                            <constraint firstItem="mcu-BF-iwj" firstAttribute="leading" secondItem="TFQ-2q-83t" secondAttribute="leading" constant="8" id="57Y-6d-ic7"/>
+                            <constraint firstItem="HHU-lQ-spr" firstAttribute="leading" secondItem="QAf-FH-b9c" secondAttribute="leading" id="58a-wz-93q"/>
+                            <constraint firstItem="TFQ-2q-83t" firstAttribute="trailing" secondItem="QAf-FH-b9c" secondAttribute="trailing" id="Fmp-Ov-uaL"/>
+                            <constraint firstItem="mcu-BF-iwj" firstAttribute="top" secondItem="TFQ-2q-83t" secondAttribute="top" id="GEt-Zk-Kjl"/>
+                            <constraint firstItem="mcu-BF-iwj" firstAttribute="width" secondItem="DEx-er-nZ8" secondAttribute="height" multiplier="199:448" id="Qfv-D9-UQT"/>
+                            <constraint firstItem="HHU-lQ-spr" firstAttribute="trailing" secondItem="QAf-FH-b9c" secondAttribute="trailing" id="Ynf-Mx-S5C"/>
+                            <constraint firstItem="QAf-FH-b9c" firstAttribute="leading" secondItem="TFQ-2q-83t" secondAttribute="leading" id="aAs-hc-c0B"/>
+                            <constraint firstItem="HHU-lQ-spr" firstAttribute="top" secondItem="QAf-FH-b9c" secondAttribute="bottom" constant="8" id="f6i-oG-QSc"/>
+                            <constraint firstItem="TFQ-2q-83t" firstAttribute="bottom" secondItem="HHU-lQ-spr" secondAttribute="bottom" constant="8" id="sUv-Qx-omn"/>
+                            <constraint firstItem="TFQ-2q-83t" firstAttribute="trailing" secondItem="mcu-BF-iwj" secondAttribute="trailing" constant="8" id="viQ-UG-SMS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TFQ-2q-83t"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnPlay" destination="Qyz-ip-vaB" id="1Qw-5I-uND"/>
+                        <outlet property="playerView" destination="mcu-BF-iwj" id="S8U-YW-ou0"/>
+                        <outlet property="trimmerView" destination="QAf-FH-b9c" id="sd3-UC-mRj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RQP-sT-twx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.599999999999994" y="-667.01649175412297"/>
+        </scene>
+    </scenes>
+</document>
